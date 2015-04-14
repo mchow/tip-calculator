@@ -58,6 +58,18 @@
                                     <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="EF8-5e-6eL"/>
                                 </connections>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zdd-1c-fWQ">
+                                <rect key="frame" x="-1" y="28" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Tip Calcuator" id="OPh-YR-zzg">
+                                        <barButtonItem key="rightBarButtonItem" title="Settings" id="i6j-Tn-6YL">
+                                            <connections>
+                                                <segue destination="pOR-mA-O2o" kind="modal" id="4sX-z6-pOV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dvg-0h-xOs">
                                 <rect key="frame" x="31" y="347" width="256" height="29"/>
                                 <segments>
@@ -67,6 +79,7 @@
                                 </segments>
                                 <connections>
                                     <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="DDn-iA-MQL"/>
+                                    <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="ggc-Io-d6u"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -88,6 +101,58 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="234" y="366"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="ln9-xp-8XF">
+            <objects>
+                <viewController id="pOR-mA-O2o" customClass="SettingsViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hwt-bE-Uro"/>
+                        <viewControllerLayoutGuide type="bottom" id="GEc-GW-bnE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f91-bL-ses">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKq-Om-i7V">
+                                <rect key="frame" x="0.0" y="106" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A5v-67-ngP">
+                                <rect key="frame" x="31" y="160" width="259" height="29"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onTipControlChange:" destination="pOR-mA-O2o" eventType="valueChanged" id="8Vr-1X-8Og"/>
+                                </connections>
+                            </segmentedControl>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBL-gY-qkq">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="rfa-tX-Wu7">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="0UA-Mu-Drh">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="modal" id="cqk-fs-CiO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="defaultTipControl" destination="A5v-67-ngP" id="krQ-8t-eaz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVQ-ke-keh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="366"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

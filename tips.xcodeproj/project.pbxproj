@@ -13,6 +13,7 @@
 		6D2C66A51AD81CEB0025A80C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D2C66A41AD81CEB0025A80C /* Images.xcassets */; };
 		6D2C66A81AD81CEB0025A80C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D2C66A61AD81CEB0025A80C /* LaunchScreen.xib */; };
 		6D2C66B41AD81CEB0025A80C /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C66B31AD81CEB0025A80C /* tipsTests.swift */; };
+		6DC50F9D1ADCAA2F0000F995 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC50F9C1ADCAA2F0000F995 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		6D2C66AD1AD81CEB0025A80C /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D2C66B21AD81CEB0025A80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D2C66B31AD81CEB0025A80C /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
+		6DC50F9C1ADCAA2F0000F995 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				6D2C66A41AD81CEB0025A80C /* Images.xcassets */,
 				6D2C66A61AD81CEB0025A80C /* LaunchScreen.xib */,
 				6D2C669B1AD81CEB0025A80C /* Supporting Files */,
+				6DC50F9C1ADCAA2F0000F995 /* SettingsViewController.swift */,
 			);
 			path = tips;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				6D2C66A01AD81CEB0025A80C /* ViewController.swift in Sources */,
 				6D2C669E1AD81CEB0025A80C /* AppDelegate.swift in Sources */,
+				6DC50F9D1ADCAA2F0000F995 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				6D2C66B91AD81CEB0025A80C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D2C66BA1AD81CEB0025A80C /* Build configuration list for PBXNativeTarget "tipsTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				6D2C66BC1AD81CEB0025A80C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
